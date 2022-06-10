@@ -3,6 +3,7 @@
 use App\Http\Controllers\cursosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
+use App\Http\Controllers\pruebaController;
 
 
 /*
@@ -24,6 +25,9 @@ Route::controller(cursosController::class)->group(function(){
     Route::get('cursos/create', 'create');
     Route::get('cursos/{curso}', 'show');
 });
+
+Route::get('prueba', pruebaController::class);
+
 
 /* Route::get('cursos', [cursosController::class, 'index']);
 Route::get('cursos/create', [cursosController::class, 'create']);
